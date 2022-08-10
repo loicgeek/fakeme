@@ -13,12 +13,12 @@ class Population {
 @fakeable
 class User {
   String? name;
+  @fakeable
   List<String>? likes;
   Address? address;
 
   @override
   String toString() {
-    // TODO: implement toString
     return "name:$name, address:$address,likes:$likes";
   }
 }
@@ -30,7 +30,6 @@ class Address {
 
   @override
   String toString() {
-    // TODO: implement toString
     return "code:$code,street:$street";
   }
 }

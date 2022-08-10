@@ -37,7 +37,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
             {},
             {},
             {r'': (bool b) => () => b ? prefix1.Population() : null},
-            -1,
+            0,
             0,
             const <int>[],
             const <Object>[prefix2.fakeable],
@@ -55,7 +55,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
             {},
             {},
             {r'': (bool b) => () => b ? prefix1.User() : null},
-            -1,
+            0,
             1,
             const <int>[],
             const <Object>[prefix2.fakeable],
@@ -73,7 +73,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
             {},
             {},
             {r'': (bool b) => () => b ? prefix1.Address() : null},
-            -1,
+            0,
             2,
             const <int>[],
             const <Object>[prefix2.fakeable],
@@ -156,7 +156,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
               r'unmodifiable': (bool b) =>
                   (elements) => b ? List.unmodifiable(elements) : null
             },
-            -1,
+            1,
             3,
             const <int>[],
             const [],
@@ -181,7 +181,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
             },
             {},
             {r'': (bool b) => () => b ? Object() : null},
-            -1,
+            1,
             4,
             const <int>[],
             const [],
@@ -215,7 +215,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
               r'setter': (bool b) => (memberName, argument) =>
                   b ? Invocation.setter(memberName, argument) : null
             },
-            -1,
+            1,
             5,
             const <int>[],
             const [],
@@ -277,7 +277,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
                   ? String.fromEnvironment(name, defaultValue: defaultValue)
                   : null
             },
-            -1,
+            1,
             6,
             const <int>[],
             const [],
@@ -301,7 +301,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
               r'hasEnvironment': (bool b) =>
                   (name) => b ? bool.hasEnvironment(name) : null
             },
-            -1,
+            1,
             7,
             const <int>[],
             const [],
@@ -355,7 +355,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
                   ? int.fromEnvironment(name, defaultValue: defaultValue)
                   : null
             },
-            -1,
+            1,
             8,
             const <int>[],
             const [],
@@ -373,7 +373,7 @@ final _data = <r.Reflectable, r.ReflectorData>{
             {},
             {},
             {},
-            -1,
+            1,
             9,
             const <int>[],
             const [],
@@ -412,8 +412,16 @@ final _data = <r.Reflectable, r.ReflectorData>{
             const prefix0.FieldReflector(), 3, 12, 3, const <int>[1], const []),
         r.VariableMirrorImpl(r'name', 67239941, 1,
             const prefix0.FieldReflector(), 6, 6, 6, const <int>[], const []),
-        r.VariableMirrorImpl(r'likes', 84017157, 1,
-            const prefix0.FieldReflector(), 3, 13, 3, const <int>[6], const []),
+        r.VariableMirrorImpl(
+            r'likes',
+            84017157,
+            1,
+            const prefix0.FieldReflector(),
+            3,
+            13,
+            3,
+            const <int>[6],
+            const <Object>[prefix2.fakeable]),
         r.VariableMirrorImpl(r'address', 67239941, 1,
             const prefix0.FieldReflector(), 2, 2, 2, const <int>[], const []),
         r.VariableMirrorImpl(r'code', 67239941, 2,
@@ -3206,7 +3214,34 @@ final _data = <r.Reflectable, r.ReflectorData>{
         r'code=': (dynamic instance, value) => instance.code = value,
         r'street=': (dynamic instance, value) => instance.street = value
       },
-      null,
+      <m.LibraryMirror>[
+        r.LibraryMirrorImpl(
+            r'',
+            Uri.parse(r'reflectable://0/'),
+            const prefix0.FieldReflector(),
+            const <int>[],
+            {},
+            {},
+            const [],
+            null),
+        r.LibraryMirrorImpl(
+            r'dart.core',
+            Uri.parse(r'reflectable://1/dart.core'),
+            const prefix0.FieldReflector(),
+            const <int>[0, 1, 2, 3, 10, 11, 12],
+            {
+              r'deprecated': () => deprecated,
+              r'override': () => override,
+              r'provisional': () => provisional,
+              r'proxy': () => proxy,
+              r'identical': () => identical,
+              r'identityHashCode': () => identityHashCode,
+              r'print': () => print
+            },
+            {},
+            const [],
+            null)
+      ],
       [])
 };
 

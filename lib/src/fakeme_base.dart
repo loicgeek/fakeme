@@ -1,5 +1,3 @@
-// TODO: Put public facing types in this file.
-
 import 'dart:math' show Random;
 
 import 'package:reflectable/reflectable.dart';
@@ -29,13 +27,10 @@ class FakeMe {
     }
 
     for (var i = 0; i < count; i++) {
-      print(classMirror.reflectedType);
-
       try {
         classMirror.newInstance("", []);
       } catch (e) {
         if (type != null) {
-          print(type.toString());
           results.add(fakeType(type));
           continue;
         }
@@ -54,10 +49,22 @@ class FakeMe {
         } else {
           if (variableMirror.type.simpleName == "List") {
             Type fieldType = variableMirror.type.reflectedTypeArguments.first;
+
+            print(fieldType);
+            var newMirror = fakeable.reflectType(variableMirror.reflectedType);
+            print(variableMirror.reflectedType);
+            print(newMirror);
+
             var value = generate(3, fieldType);
-            print(value);
+            print(value.runtimeType);
+
             //TODO : type 'List<dynamic>' is not a subtype of type 'List<String>?' of 'value'
-            aInstanceMirror.invokeSetter(variableMirror.simpleName, value);
+            try {
+              aInstanceMirror
+                  .invokeSetter(variableMirror.simpleName, ["45", "e"]);
+            } catch (e) {
+              print(e);
+            }
           } else {
             Type fieldType = variableMirror.type.reflectedType;
             var value = fakeType(fieldType);

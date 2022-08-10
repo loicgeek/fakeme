@@ -11,7 +11,7 @@ class FieldReflector extends Reflectable {
           staticInvokeCapability,
           instanceInvokeCapability,
           topLevelInvokeCapability,
-          instanceInvokeCapability,
           typeRelationsCapability,
+          libraryCapability,
         );
 }
